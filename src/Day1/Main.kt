@@ -1,4 +1,5 @@
 package Day1
+import java.io.Serializable
 
 class Main: VersionControl() {
     override fun firstBadVersion(n: Int) : Int {
@@ -11,12 +12,13 @@ class Main: VersionControl() {
         //           println("this is a bad version  -> " + n)
         //       }
         //   }
-        var i = 0
-        while(i<n){
-            if(isBadVersion[i]){
-                println(i)
+        var earliestKnownBadVersion = 0
+        while(earliestKnownBadVersion<n){
+            if(isBadVersion[earliestKnownBadVersion]){
+                println(earliestKnownBadVersion)
+                break
             }
-            i++
+            earliestKnownBadVersion++
         }
         return n
     }
