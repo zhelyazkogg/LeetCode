@@ -2,8 +2,8 @@ package Day1
 
 class Main: VersionControl() {
     override fun firstBadVersion(n: Int) : Int {
-        val n = 5
-        val isBadVersion = arrayOf(false, false, false, true, true)
+        val n = 4
+        val isBadVersion = arrayOf(false, false, false, false, true, true)
         //   for(n in isBadVersion){
         //       if(n == false){
         //           println("this is a good version -> " + n)
@@ -12,10 +12,11 @@ class Main: VersionControl() {
         //       }
         //   }
         var i = 0
-        //  val isBadVersion = arrayOf(1, 2, 3, 4, 5)
         while(i<n){
-            ++i
-
+            if(isBadVersion[i]){
+                println(i)
+            }
+            i++
         }
         return n
     }
