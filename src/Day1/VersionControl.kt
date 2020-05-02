@@ -1,8 +1,10 @@
 package Day1
 
+import jdk.internal.jshell.tool.resources.version
+
 open class VersionControl {
 
-    open fun firstBadVersion(n: Int): Int {
-        def isBadVersion(version: Int): Boolean = {}
+     open fun firstBadVersion(n: Int): Int {
+        isBadVersion(version: Int): Boolean = {}
     }
 }

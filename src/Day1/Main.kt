@@ -3,15 +3,17 @@ import java.io.Serializable
 
 class Main: VersionControl() {
     override fun firstBadVersion(n: Int) : Int {
-
-        var earliestKnownBadVersion = 0
-        while(earliestKnownBadVersion<n){
-            if(isBadVersion(earliestKnownBadVersion)){
-                break
+        var firstSuspectedBadVersion = 0
+        var earliestKnownBadVersion = n
+        while(firstSuspectedBadVersion < earliestKnownBadVersion){
+            val mid = firstSuspectedBadVersion + (earliestKnownBadVersion - firstSuspectedBadVersion)/2
+            if(isBadVersion(mid)){
+                earliestKnownBadVersion = mid
+            } else {
+                firstSuspectedBadVersion = mid + 1
             }
-            earliestKnownBadVersion++
         }
-        return earliestKnownBadVersion
+        return firstSuspectedBadVersion
     }
 }
 
