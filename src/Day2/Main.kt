@@ -2,13 +2,13 @@ package Day2
 
 class Main {
     fun numJewelsInStones(J: String, S: String): Int {
-        val jHashMap = hashMapOf<Char, Boolean>()
-        J.forEach { count ->
-            jHashMap[count] = true
-        }
+        val jewelHashMap = hashMapOf<Char, Boolean>()
         var jewelCount = 0
-        S.forEach { count ->
-            if (jHashMap[count] == true){
+        J.forEach {
+            jewelHashMap[it] = true
+        }
+        S.forEach {
+            if (jewelHashMap[it]==true){
                 jewelCount++
             }
         }
