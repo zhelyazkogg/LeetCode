@@ -1,7 +1,7 @@
 package Day1
 import java.io.Serializable
 
-class Main: VersionControl() {
+class Solution: VersionControl() {
     override fun firstBadVersion(n: Int) : Int {
         var firstSuspectedBadVersion = 0
         var earliestKnownBadVersion = n

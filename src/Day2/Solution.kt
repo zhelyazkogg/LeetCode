@@ -1,6 +1,6 @@
 package Day2
 
-class Main {
+class Solution {
     fun numJewelsInStones(J: String, S: String): Int {
         val jewelHashMap = hashMapOf<Char, Boolean>()
         var jewelCount = 0
