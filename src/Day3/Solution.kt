@@ -16,8 +16,15 @@ canConstruct("aa", "aab") -> true
 class Solution {
     fun main(args: Array<String>) {
         fun canConstruct(ransomNote: String, magazine: String): Boolean {
+            var symbols = 0
             for((index, value) in magazine.withIndex()){
-                println(ransomNote[0]==magazine[index])
+                // println(ransomNote[0]==magazine[index])
+                for(symbols in ransomNote) {
+                    print(symbols)
+                    if (symbols.equals(magazine[index])){
+                        println(value)
+                    }
+                }
 
             }
             return true
