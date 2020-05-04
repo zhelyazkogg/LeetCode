@@ -29,7 +29,6 @@ class Solution {
         var result = 0
         var i = 0
         while (number != 0) {
-
             val last = (number and 1) xor 1
             number = number shr 1
             if (last == 1) {
