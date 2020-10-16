@@ -23,6 +23,16 @@ package NewProjectsArrays;
 
 public class FindNumbersWithEvenNumberOfDigits {
     public int findNumbers(int[] nums) {
-           
+        // create a counter to keep track
+        int count = 0;
+        // do a for i in nums
+        for(int i : nums){
+
+            //count should go over every number in the array and count its every digit. if the length of the number
+            // is dividable to 2 it should return a True, and if its only dividable to 1 then it should return a False.
+            count += String.valueOf(i).length() % 2 == 0 ? 1 : 0;
+        }
+        // and last we need that count of how many numbers have an even number of digits
+        return count;
     }
 }
